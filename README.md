@@ -1,5 +1,5 @@
-# PS5 Relapse Exploit
-Supported firmware: 7.00 through 13.60.
+# PS5 tmem exploit test
+Supported firmware: 7.00 through 14.20. (upto 13.60 via webkit)
 
 ## Usage
 The default payloads are stored in `payloads/` after a successful run, the ELF loader listens on port `9021`.
@@ -8,7 +8,7 @@ The default payloads are stored in `payloads/` after a successful run, the ELF l
 Webkit may need several attempts, reload the page if the browser stalls. The kernel exploit may hang or panic the console, so reboot before trying again if that happens.
 
 ## Exploit chain
-Browser stage uses JSC info leaks and a structured clone object pool mismatch to corrupt a typedarray. The kernel stage combines a address leak with an `aio_multi_wait` uaf race to establish kernel r/w.
+Exploit is in WIP
 
 ### Kernel stage selection (src/main.js)
 `window.KERNEL_STAGE` picks the kernel lane:
@@ -21,15 +21,8 @@ Browser stage uses JSC info leaks and a structured clone object pool mismatch to
   retail webkit context cannot reach it.
 
 ## Credits
-- Sonic_Iso: Kernel Exploit
-- Jordy: Webkit Exploit and Kernel Bug
-- ntfargo: Exploit Dev
-- ufm42: Exploit Dev
-- Dr. Yenyen: Testing
+- (WIP)
 
-Other helps:
-- TheFlow, SlidyBat, Flatz, cow, nhk, bollarz, Sleirsgoevy, EchoStretch, EarthOnion.
- 
 ## Disclaimer
 This project is intended for **educational and security research purposes only**. It does not endorse piracy, unauthorized access, or misuse of commercial devices. Use it only on devices you own or are authorized to test, and comply with applicable laws and regulations.
 
